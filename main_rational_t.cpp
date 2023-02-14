@@ -1,6 +1,6 @@
-// AUTOR: 
-// FECHA: 
-// EMAIL: 
+// AUTOR: Jose Angel Portillo Garcia
+// FECHA: 14/02/2023
+// EMAIL: alu0101568232@ull.edu.es
 // VERSION: 1.0
 // ASIGNATURA: Algoritmos y Estructuras de Datos
 // PRÁCTICA Nº: 1
@@ -19,8 +19,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   rational_t a(1, 2), b(3), c;
 
   cout << "a.value()= " << a.value() << endl;
@@ -28,34 +27,35 @@ int main()
   cout << "c.value()= " << c.value() << endl;
 
   cout << "a: ";
-  a.write();
+  a.Write();
   cout << "b: ";
-  b.write();
+  b.Write();
 
-  c.read();
+  c.Read();
   cout << "c: ";
-  c.write();
+  c.Write();
 
   // FASE II
-  // rational_t x(1, 3), y(2, 3);
-  // x.write();
-  // y.write();
-  // cout << "x == y? " << (x.is_equal(y) ? "true" : "false") << endl;
-  // cout << "x < y? " << (x.is_greater(y) ? "true" : "false") << endl;
-  // cout << "x > y? " << (x.is_less(y) ? "true" : "false") << endl;
+  rational_t rational01(1, 3), rational02(2, 3);
+  rational01.Write();
+  rational02.Write();
+  cout << "rational 1 == rational 2? " << (rational01.IsEqual(rational02) ? "true" : "false") << endl;
+  cout << "rational 1 < rational 2? " << (rational01.IsGreater(rational02) ? "true" : "false") << endl;
+  cout << "rational 1 > rational 2? " << (rational01.IsLess(rational02) ? "true" : "false") << endl;
+  cout << "rational 1 == 0 " << (rational01.IsZero() ? "true" : "false") << endl;
 
   // FASE III
-  // cout << "a + b: ";
-  // a.add(b).write();
+  cout << "a + b: ";
+  a.Add(b).Write();
   
-  // cout << "b - a: ";
-  // b.substract(a).write();
+  cout << "b - a: ";
+  b.Substract(a).Write();
 
-  // cout << "a * b: ";
-  // a.multiply(b).write();
+  cout << "a * b: ";
+  a.Multiply(b).Write();
   
-  // cout << "a / b: ";
-  // a.divide(b).write();
+  cout << "a / b: ";
+  a.Divide(b).Write();
   
   return 0;
 }
