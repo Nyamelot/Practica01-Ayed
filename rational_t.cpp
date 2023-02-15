@@ -93,7 +93,7 @@ rational_t::Add(const rational_t& rational) {
 
 rational_t
 rational_t::Substract(const rational_t& rational) {
-  return rational_t ((num_ * -rational.get_den()) + (den_ * -rational.get_num()), den_ * -rational.get_den());
+  return rational_t ((num_ * rational.get_den()) + (den_ * -rational.get_num()), den_ * rational.get_den());
 }
 
 
