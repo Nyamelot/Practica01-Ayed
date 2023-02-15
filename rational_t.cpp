@@ -58,28 +58,28 @@ rational_t::value() const {
 // comparaciones
 bool
 rational_t::IsEqual(const rational_t& rational, const double precision) const {
-  return true ? fabs( (num_ / den_) - rational.value()) < precision : false;
+  return fabs( (num_ / den_) - rational.value()) < precision ? true : false;
 }
 
 
 
 bool
 rational_t::IsGreater(const rational_t& rational, const double precision) const {
-  return true ? (num_ / den_) - rational.value() > precision : false;
+  return (num_ / den_) - rational.value() > precision ? true : false;
 }
 
 
 
 bool
 rational_t::IsLess(const rational_t& rational, const double precision) const {
-  return true ? rational.value() - (num_ / den_) > precision : false;
+  return rational.value() - (num_ / den_) > precision ? true : false;
 }
 
 
 
 bool
 rational_t::IsZero(const double precision) const {
-  return true ? fabs((num_ / den_)) < precision : false;
+  return fabs((num_ / den_)) < precision ? true : false;
 }
 
 
