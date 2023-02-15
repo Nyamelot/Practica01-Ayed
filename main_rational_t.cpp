@@ -40,8 +40,8 @@ int main() {
   rational01.Write();
   rational02.Write();
   cout << "rational 1 == rational 2? " << (rational01.IsEqual(rational02) ? "true" : "false") << endl;
-  cout << "rational 1 < rational 2? " << (rational01.IsGreater(rational02) ? "true" : "false") << endl;
-  cout << "rational 1 > rational 2? " << (rational01.IsLess(rational02) ? "true" : "false") << endl;
+  cout << "rational 1 > rational 2? " << (rational01.IsGreater(rational02) ? "true" : "false") << endl;
+  cout << "rational 1 < rational 2? " << (rational01.IsLess(rational02) ? "true" : "false") << endl;
   cout << "rational 1 == 0 " << (rational01.IsZero() ? "true" : "false") << endl;
 
   // FASE III
