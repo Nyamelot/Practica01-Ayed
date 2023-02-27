@@ -1,12 +1,14 @@
-// AUTOR: Jose Angel Portillo Garcia
-// FECHA: 14/02/2023
-// EMAIL: alu0101568232@ull.edu.es
-// VERSION: 1.0
-// ASIGNATURA: Algoritmos y Estructuras de Datos
-// PRÁCTICA Nº: 1
-// COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
-//              "C++ Programming Style Guidelines"
-//              https://geosoft.no/development/cppstyle.html
+
+/** AUTOR: Jose Angel Portillo Garcia
+ *  FECHA: 14/02/2023
+ *  EMAIL: alu0101568232@ull.edu.es
+ *  VERSION: 1.0
+ *  ASIGNATURA: Algoritmos y Estructuras de Datos
+ *  PRÁCTICA Nº: 1
+ *  COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
+ *              "C++ Programming Style Guidelines"
+ *              https://geosoft.no/development/cppstyle.html
+ */
 
 // pauta de estilo [92]: comentarios multilínea usando solo "//"
 
@@ -32,14 +34,14 @@ public:
   
   // pauta de estilo [71]: indentación a 2 espacios
   // getters
-  int get_num() const;
-  int get_den() const;
+  int GetNum() const;
+  int GetDen() const;
   
   // setters
   void set_num(const int);
   void set_den(const int);
 
-  double value(void) const;
+  double Value(void) const;
 
   // FASE II
   bool IsEqual(const rational_t& rational, const double precision = EPSILON) const;

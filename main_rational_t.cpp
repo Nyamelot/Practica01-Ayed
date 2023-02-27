@@ -1,14 +1,15 @@
-// AUTOR: Jose Angel Portillo Garcia
-// FECHA: 14/02/2023
-// EMAIL: alu0101568232@ull.edu.es
-// VERSION: 1.0
-// ASIGNATURA: Algoritmos y Estructuras de Datos
-// PRÁCTICA Nº: 1
-// COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
-//              "C++ Programming Style Guidelines"
-//              https://geosoft.no/development/cppstyle.html
-// COMPILACIÓN: g++ -g rational_t.cpp main_rational_t.cpp -o main_rational_t
 
+/** AUTOR: Jose Angel Portillo Garcia
+ * FECHA: 14/02/2023
+ * EMAIL: alu0101568232@ull.edu.es
+ * VERSION: 1.0
+ * ASIGNATURA: Algoritmos y Estructuras de Datos
+ * PRÁCTICA Nº: 1
+ * COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
+ *              "C++ Programming Style Guidelines"
+ *              https://geosoft.no/development/cppstyle.html
+ * COMPILACIÓN: g++ -g rational_t.cpp main_rational_t.cpp -o main_rational_t
+ */
 // pauta de estilo [92]: comentarios multilínea usando solo "//"
 
 #include <iostream>
@@ -22,9 +23,9 @@ using namespace std;
 int main() {
   rational_t a(1, 2), b(3), c;
 
-  cout << "a.value()= " << a.value() << endl;
-  cout << "b.value()= " << b.value() << endl;
-  cout << "c.value()= " << c.value() << endl;
+  cout << "a.value()= " << a.Value() << endl;
+  cout << "b.value()= " << b.Value() << endl;
+  cout << "c.value()= " << c.Value() << endl;
 
   cout << "a: ";
   a.Write();
