@@ -13,7 +13,6 @@
 // pauta de estilo [92]: comentarios multilínea usando solo "//"
 
 #include <iostream>
-#include <cmath>
 
 // pauta de estilo [41]: ficheros de cabecera agrupados y separados
 #include "rational_t.hpp"

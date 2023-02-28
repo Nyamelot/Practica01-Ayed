@@ -38,8 +38,8 @@ public:
   int GetDen() const;
   
   // setters
-  void set_num(const int);
-  void set_den(const int);
+  void SetNum(const int);
+  void SetDen(const int);
 
   double Value(void) const;
 

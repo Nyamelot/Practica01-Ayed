@@ -34,13 +34,13 @@ int rational_t::GetDen() const {
 
 
   
-void rational_t::set_num(const int n) {
+void rational_t::SetNum(const int n) {
   num_ = n;
 }
 
 
   
-void rational_t::set_den(const int d) {
+void rational_t::SetDen(const int d) {
   assert(d != 0);
   den_ = d;
 }
@@ -54,25 +54,25 @@ double rational_t::Value() const {
 
 // comparaciones
 bool rational_t::IsEqual(const rational_t& rational, const double precision) const {
-  return fabs( (num_ / den_) - rational.Value()) < precision ? true : false;
+  return fabs( (num_ / den_) - rational.Value()) < precision;
 }
 
 
 
 bool rational_t::IsGreater(const rational_t& rational, const double precision) const {
-  return (num_ / den_) - rational.Value() > precision ? true : false;
+  return (num_ / den_) - rational.Value() > precision;
 }
 
 
 
 bool rational_t::IsLess(const rational_t& rational, const double precision) const {
-  return rational.Value() - (num_ / den_) > precision ? true : false;
+  return rational.Value() - (num_ / den_) > precision;
 }
 
 
 
 bool rational_t::IsZero(const double precision) const {
-  return fabs((num_ / den_)) < precision ? true : false;
+  return fabs((num_ / den_)) < precision;
 }
 
 
