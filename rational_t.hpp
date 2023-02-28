@@ -54,6 +54,9 @@ public:
   rational_t Substract(const rational_t& rational);
   rational_t Multiply(const rational_t& rational);
   rational_t Divide(const rational_t& rational);
+
+  //MODIFICACION
+  rational_t SubstractOne();
   
   void Write(ostream& = cout) const;
   void Read(istream& = cin);

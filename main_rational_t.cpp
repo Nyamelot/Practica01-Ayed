@@ -21,20 +21,16 @@ using namespace std;
 
 int main() {
   rational_t a(1, 2), b(3), c;
-
   cout << "a.value()= " << a.Value() << endl;
   cout << "b.value()= " << b.Value() << endl;
   cout << "c.value()= " << c.Value() << endl;
-
   cout << "a: ";
   a.Write();
   cout << "b: ";
   b.Write();
-
   c.Read();
   cout << "c: ";
   c.Write();
-
   // FASE II
   rational_t rational01(1, 3), rational02(2, 3);
   rational01.Write();
@@ -43,19 +39,21 @@ int main() {
   cout << "rational 1 > rational 2? " << (rational01.IsGreater(rational02) ? "true" : "false") << endl;
   cout << "rational 1 < rational 2? " << (rational01.IsLess(rational02) ? "true" : "false") << endl;
   cout << "rational 1 == 0 " << (rational01.IsZero() ? "true" : "false") << endl;
-
   // FASE III
   cout << "a + b: ";
   a.Add(b).Write();
-  
   cout << "b - a: ";
   b.Substract(a).Write();
-
   cout << "a * b: ";
   a.Multiply(b).Write();
-  
   cout << "a / b: ";
   a.Divide(b).Write();
+  cout << "Introduce un numerador y un denominador para restarlo por 1" << endl;
+  rational_t racional_menos_uno;
+  racional_menos_uno.Read();
+  racional_menos_uno.Write();
+  racional_menos_uno.SubstractOne();
+  racional_menos_uno.Write();
   
   return 0;
 }

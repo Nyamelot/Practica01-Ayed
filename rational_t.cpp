@@ -117,3 +117,11 @@ void rational_t::Read(istream& is)
   is >> den_;
   assert(den_ != 0);
 }
+
+
+//Modificacion
+
+rational_t rational_t::SubstractOne() {
+  rational_t racional_menos_uno (num_ - den_, den_);
+  return racional_menos_uno;
+}
