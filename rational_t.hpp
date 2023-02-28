@@ -7,10 +7,10 @@
  *  PRÁCTICA Nº: 1
  *  COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
  *              "C++ Programming Style Guidelines"
- *              https://geosoft.no/development/cppstyle.html
+ *              https://google.github.io/styleguide/cppguide.html
  */
 
-// pauta de estilo [92]: comentarios multilínea usando solo "//"
+// pauta de estilo [92]: comentarios multilínea usando solo "/*/"
 
 #pragma once
 #ifndef RATIONAL_T_
@@ -20,8 +20,8 @@
 #include <cassert>
 #include <cmath>
 
-// pauta de estilo [5]
-# define EPSILON 1e-6
+// pauta de estilo [5] Declaraciones directas
+#define EPSILON 1e-6
 
 using namespace std;
 
@@ -56,7 +56,7 @@ public:
   rational_t Divide(const rational_t& rational);
 
   //MODIFICACION
-  rational_t SubstractOne();
+  rational_t SubstractOne(double numerador, double denominador);
   
   void Write(ostream& = cout) const;
   void Read(istream& = cin);

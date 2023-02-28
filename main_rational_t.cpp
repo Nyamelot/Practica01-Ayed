@@ -7,10 +7,10 @@
  * PRÁCTICA Nº: 1
  * COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
  *              "C++ Programming Style Guidelines"
- *              https://geosoft.no/development/cppstyle.html
+ *             https://google.github.io/styleguide/cppguide.html
  * COMPILACIÓN: g++ -g rational_t.cpp main_rational_t.cpp -o main_rational_t
  */
-// pauta de estilo [92]: comentarios multilínea usando solo "//"
+// pauta de estilo [92]: comentarios multilínea usando solo "/*/"
 
 #include <iostream>
 
@@ -20,7 +20,7 @@
 using namespace std;
 
 int main() {
-  rational_t a(1, 2), b(3), c;
+  rational_t a(1, 2), b(1, 2), c;
   cout << "a.value()= " << a.Value() << endl;
   cout << "b.value()= " << b.Value() << endl;
   cout << "c.value()= " << c.Value() << endl;
@@ -49,11 +49,11 @@ int main() {
   cout << "a / b: ";
   a.Divide(b).Write();
   cout << "Introduce un numerador y un denominador para restarlo por 1" << endl;
+  double numerador;
+  double denominador;
   rational_t racional_menos_uno;
-  racional_menos_uno.Read();
-  racional_menos_uno.Write();
-  racional_menos_uno.SubstractOne();
-  racional_menos_uno.Write();
-  
+  cin >> numerador;
+  cin >> denominador;
+  racional_menos_uno.SubstractOne(numerador, denominador).Write();;
   return 0;
 }

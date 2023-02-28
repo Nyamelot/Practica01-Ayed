@@ -7,10 +7,10 @@
  * PRÁCTICA Nº: 1
  * COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
  *              "C++ Programming Style Guidelines"
- *              https://geosoft.no/development/cppstyle.html
+ *             https://google.github.io/styleguide/cppguide.html
  */
 
-// pauta de estilo [92]: comentarios multilínea usando solo "//"
+// pauta de estilo [92]: comentarios multilínea usando solo "/*/"
 
 #include "rational_t.hpp"
 
@@ -21,7 +21,7 @@ rational_t::rational_t(const int n, const int d) {
 
 // pauta de estilo [87]: 3 líneas de separación entre métodos
 
-// pauta de estilo [83]: tipo retornado en línea anterior al método
+// pauta de estilo [83]: tipo retornado en en la misma línea del metodo
 int rational_t::GetNum() const {
   return num_;
 }
@@ -42,7 +42,7 @@ void rational_t::SetNum(const int n) {
   
 void rational_t::SetDen(const int d) {
   assert(d != 0);
-  den_ = d;
+  den_ = d;// pauta de estilo [92]: comentarios multilínea usando solo "//"
 }
 
 
@@ -68,8 +68,7 @@ bool rational_t::IsGreater(const rational_t& rational, const double precision) c
 bool rational_t::IsLess(const rational_t& rational, const double precision) const {
   return rational.Value() - (num_ / den_) > precision;
 }
-
-
+// pauta de estilo [92]: comentarios multilínea usando solo "//"
 
 bool rational_t::IsZero(const double precision) const {
   return fabs((num_ / den_)) < precision;
@@ -107,7 +106,7 @@ void rational_t::Write(ostream& os) const
   os << GetNum() << "/" << GetDen() << "=" << Value() << endl;
 }
 
-
+// pauta de estilo [92]: comentarios multilínea usando solo "//"
 
 void rational_t::Read(istream& is)
 {
@@ -120,8 +119,6 @@ void rational_t::Read(istream& is)
 
 
 //Modificacion
-
-rational_t rational_t::SubstractOne() {
-  rational_t racional_menos_uno (num_ - den_, den_);
-  return racional_menos_uno;
+rational_t rational_t::SubstractOne(double numerador, double denominador) {
+  return rational_t (numerador - denominador, denominador);
 }
