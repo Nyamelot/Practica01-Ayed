@@ -54,19 +54,19 @@ double rational_t::Value() const {
 
 // comparaciones
 bool rational_t::IsEqual(const rational_t& rational, const double precision) const {
-  return fabs( (num_ / den_) - rational.Value()) < precision;
+  return fabs( Value() - rational.Value()) < precision;
 }
 
 
 
 bool rational_t::IsGreater(const rational_t& rational, const double precision) const {
-  return (num_ / den_) - rational.Value() > precision;
+  return Value() - rational.Value() > precision;
 }
 
 
 
 bool rational_t::IsLess(const rational_t& rational, const double precision) const {
-  return rational.Value() - (num_ / den_) > precision;
+  return rational.Value() - Value() > precision;
 }
 // pauta de estilo [92]: comentarios multilínea usando solo "//"
 

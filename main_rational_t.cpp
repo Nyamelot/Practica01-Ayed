@@ -32,7 +32,7 @@ int main() {
   cout << "c: ";
   c.Write();
   // FASE II
-  rational_t rational01(1, 3), rational02(2, 3);
+  rational_t rational01(1, 3), rational02(1, 3);
   rational01.Write();
   rational02.Write();
   cout << "rational 1 == rational 2? " << (rational01.IsEqual(rational02) ? "true" : "false") << endl;
